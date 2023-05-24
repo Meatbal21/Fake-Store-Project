@@ -1,0 +1,24 @@
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    margin: 0 30px 0 30px;
+}
+
+.icon-btn img{
+    width: 34px;
+    height: 25px;
+}
+
+.icon-btn p{
+    background-color: red;
+    position: relative;
+    margin-top: -30px;
+    margin-left: 12px;
+    text-align: center;
+    border-radius: 100px;
+    width: 15px;
+    height: 15px;
+
+}
