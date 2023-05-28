@@ -1,9 +1,15 @@
 import React from 'react'
 import './ItemCard.css'
 
-function ItemCard() {
+function ItemCard({product}) {
   return (
-    <div>ItemCard</div>
+    <div className='item-card'>
+      <img src={product?.image}/>
+      <p>{product?.title}</p>
+      <p>{product?.category}</p>
+      <p>$ {product?.price}</p>
+      
+    </div>
   )
 }
 

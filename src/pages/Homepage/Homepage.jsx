@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import './Homepage.css'
 import axios from 'axios'
+import ItemCard from '../../components/ItemCard/ItemCard'
+import Electronics from '../../components/Categories/Electronics'
+
 
 //'https://fakestoreapi.com/products'
 
@@ -25,19 +28,21 @@ function Homepage() {
         },[]
 
     )
-
+        
   return (
     <div className='home-categories'>
         <ul className='categories'>
             <a href="#">All</a>
-            <a href="#">Electronics</a>
+            <Electronics setCategory={setProducts} />
             <a href="#">Jewelry</a>
             <a href="#">Men's Clothing</a>
             <a href="#">Women's Clothing</a>
         </ul>
         <div className='product-container'>
             {
-                
+                products.map(item=><ItemCard 
+                                key={item.id}
+                                product={item} />)
 
 
             }
