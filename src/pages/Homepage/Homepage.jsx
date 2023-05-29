@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import './Homepage.css'
 import axios from 'axios'
 import ItemCard from '../../components/ItemCard/ItemCard'
-import Electronics from '../../components/Categories/Electronics'
+import FilterProduct from '../../components/FilterProduct/FilterProduct'
 
 
 //'https://fakestoreapi.com/products'
@@ -10,6 +10,8 @@ import Electronics from '../../components/Categories/Electronics'
 function Homepage() {
 
     const [products, setProducts] = useState( [] )
+
+    const [productHold, setProductHold] = useState([])
 
     useEffect(
         ()=>{
@@ -20,7 +22,7 @@ function Homepage() {
                 console.log(res.data)
                 //store data
                 setProducts(res.data)
-                
+                setProductHold(res.data)
                 
         
             })
@@ -32,15 +34,12 @@ function Homepage() {
   return (
     <div className='home-categories'>
         <ul className='categories'>
-            <a href="#">All</a>
-            <Electronics setCategory={setProducts} />
-            <a href="#">Jewelry</a>
-            <a href="#">Men's Clothing</a>
-            <a href="#">Women's Clothing</a>
+            <FilterProduct products={products} setProductHold={setProductHold}/>
+
         </ul>
         <div className='product-container'>
             {
-                products.map(item=><ItemCard 
+                productHold.map(item=><ItemCard 
                                 key={item.id}
                                 product={item} />)
 

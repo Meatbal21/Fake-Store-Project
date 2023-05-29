@@ -1,0 +1,15 @@
+.category-container{
+    display: flex;
+    align-items: flex-start;
+    
+    
+
+
+}
+
+.category-container p{
+    color: var(--category-font-color);
+    display: flex;
+    margin: 0 10px;
+}
+
