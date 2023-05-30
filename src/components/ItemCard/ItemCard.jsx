@@ -4,7 +4,7 @@ import './ItemCard.css'
 function ItemCard({product}) {
   return (
     <div className='item-card'>
-      <img src={product?.image}/>
+      <a href={`/details/${product?.id}`}><img src={product?.image}/></a>
       <p>{product?.title}</p>
       <p>{product?.category}</p>
       <p>$ {product?.price}</p>

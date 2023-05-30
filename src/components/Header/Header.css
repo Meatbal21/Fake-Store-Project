@@ -6,9 +6,16 @@
     margin: 0 30px 0 30px;
 }
 
+h1{
+    color: var(--footer-background);
+    text-decoration: none;
+}
+
 .icon-btn img{
-    width: 34px;
+    width: 30px;
     height: 25px;
+    margin-top: 0px;
+
 }
 
 .icon-btn p{
@@ -20,5 +27,5 @@
     border-radius: 100px;
     width: 15px;
     height: 15px;
-
+    z-index: -1;
 }

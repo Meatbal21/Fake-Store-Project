@@ -1,14 +1,15 @@
 import React from 'react'
 import './Header.css'
+import cart from '../../assets/cart.png'
 
 function Header() {
   return (
     <div className='header-container'>
-        <h1>Fake Store</h1>
-        <div className='icon-btn'>
-            <img src="/src/assets/cart.png"/>
-            <p>1</p>
-        </div>
+       <a href="/"><h1>Fake Store</h1></a> 
+      <div className='icon-btn'>
+        <img src={cart}/>
+        <p>1</p>
+      </div>
     </div>
   )
 }
