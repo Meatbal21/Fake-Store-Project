@@ -1,10 +1,35 @@
-import React, { useEffect } from 'react'
+import React, { useContext } from 'react'
 import './ProductDetail.css'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import { CartContext } from '../../context/CartContext'
+import {FaHeart, FaRegHeart} from 'react-icons/fa'
+import CheckOut from '../CheckOut/CheckOut'
+
 
 function ProductDetail() {
-    //shor data for specific product
+    //change to global state
+  //NOTE {} not []
+
+  const {checkout, addProduct, removeProduct} = useContext(CartContext)
+
+  //create variable for cart
+  //const isCart = false;
+  const [isCheckout, setCheckout] = React.useState (false)
+
+  React.useEffect(
+    ()=>{
+      //console.log('update')
+      //is this product in cart?
+      setCheckout(checkout.find(item=> item.id === product.id))
+
+    },[checkout]
+  )
+
+
+
+
+    //show data for specific product
     //the id is in url
     const{productId} = useParams()
 
@@ -14,7 +39,7 @@ function ProductDetail() {
     //https://fakestoreapi.com/products/1
 
     //get data when page loads
-    useEffect(
+    React.useEffect(
         ()=>{
             console.log('details')
             //api call
@@ -23,12 +48,13 @@ function ProductDetail() {
                 console.log(res.data)
                 //store data
                 setProduct(res.data)
+                
 
             })
             .catch(err=>console.log(err))
         },[]
     )
-
+    
 
 
   return (
@@ -39,7 +65,18 @@ function ProductDetail() {
             <p>$ {product?.price}</p>
             <p>Description</p>
             <p>{product?.description}</p>
-            <button>Add to cart</button>
+            <button>
+            {
+                
+              isCheckout?
+               <p onClick={() => removeProduct(product.id)}>remove </p>
+               :
+               <p onClick={() =>addProduct(product)}>add</p>
+
+            
+            } 
+
+            </button>
         </div>
 
 
