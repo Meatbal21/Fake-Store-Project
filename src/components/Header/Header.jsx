@@ -1,11 +1,11 @@
 import React, {useContext} from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
-import { CartContext } from '../../context/CartContext'
 import cart from '../../assets/cart.png'
+import { CartContext } from '../../context/CartContext'
 
 function Header() {
-    //change to global state
+      //change to global state
     //NOTE {} not []
 
     const {checkout} = useContext(CartContext)

@@ -3,8 +3,6 @@ import './ProductDetail.css'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { CartContext } from '../../context/CartContext'
-import {FaHeart, FaRegHeart} from 'react-icons/fa'
-import CheckOut from '../CheckOut/CheckOut'
 
 
 function ProductDetail() {
