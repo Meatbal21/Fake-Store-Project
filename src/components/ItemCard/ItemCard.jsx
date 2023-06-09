@@ -26,8 +26,9 @@ function ItemCard({product}) {
 
 
   return (
+    <Link to={`/details/${product?.id}`}>
     <div className='item-card'>
-      <Link to={`/details/${product?.id}`}><img src={product?.image}/></Link>
+      <img src={product?.image}/>
       <p>{product?.title}</p>
       <p>{product?.category}</p>
       <p>$ {product?.price}</p>
@@ -41,7 +42,7 @@ function ItemCard({product}) {
         onClick={()=>addProduct(product)}/>
       }
       
-    </div>
+    </div></Link>
   )
 }
 

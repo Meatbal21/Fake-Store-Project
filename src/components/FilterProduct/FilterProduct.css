@@ -2,14 +2,24 @@
     display: flex;
     align-items: flex-start;
     
-    
+}
 
-
+.category-container p:hover{
+    transform: translateY(-10px);
 }
 
 .category-container p{
     color: var(--category-font-color);
+    font-size: larger;
     display: flex;
     margin: 0 10px;
+    transition: all 0.3s;
 }
 
+@media screen and (max-width: 428px){
+    .category-container{
+        flex-wrap: wrap;
+        width: 80%;
+        gap: 5px;
+    }
+}

@@ -19,7 +19,7 @@ function ProductDetail() {
     ()=>{
       //console.log('update')
       //is this product in cart?
-      setCheckout(checkout.find(item=> item.id === product.id))
+      setCheckout(checkout.find(item=> item.id == productId))
 
     },[checkout]
   )
@@ -59,17 +59,17 @@ function ProductDetail() {
     <div className='product-detail'>
         <img src={product?.image}/>
         <div className='detail-info'>
-            <p>{product?.title}</p>
-            <p>$ {product?.price}</p>
+            <p className='description'>{product?.title}</p>
+            <p className='description'>$ {product?.price}</p>
             <p>Description</p>
             <p>{product?.description}</p>
-            <button>
+            <button className='btn'>
             {
                 
               isCheckout?
-               <p onClick={() => removeProduct(product.id)}>remove </p>
+               <p className='btn-cart' onClick={() => removeProduct(product.id)}>Remove from cart</p>
                :
-               <p onClick={() =>addProduct(product)}>add</p>
+               <p className='btn-cart' onClick={() =>addProduct(product)}>Add to cart</p>
 
             
             } 

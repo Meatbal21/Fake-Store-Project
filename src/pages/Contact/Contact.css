@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    
+    margin-top: -300px;
 }
 
 .contact-container h2{
@@ -36,4 +36,12 @@ button{
     border: none;
     border-radius: 5px;
     color: white;
+}
+
+/* media query mobile */
+@media screen and (max-width: 428px){
+    .contact-container{
+        padding-top: 100px;
+        height: 70vh;
+    }
 }

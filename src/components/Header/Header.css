@@ -15,7 +15,15 @@ h1{
     width: 30px;
     height: 25px;
     margin-top: 0px;
+}
 
+.icon-btn{
+
+    transition: all 0.60s;
+}
+
+.icon-btn:hover{
+    transform: scale(0.9);
 }
 
 .icon-btn p{
