@@ -20,6 +20,9 @@
 }
 
 .item-card img{
+    display: flex;
+    margin: auto;
+
     margin-top: 20px;
     width: 150px;
     height: 150px;
