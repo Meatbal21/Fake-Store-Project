@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import CheckoutItem from '../../components/CheckoutItem/CheckoutItem'
 
 
-function CheckOut() {
+function CheckOut({product}) {
     //change to global state
     //NOTE {} not []
 

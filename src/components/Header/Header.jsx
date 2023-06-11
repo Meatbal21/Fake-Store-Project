@@ -15,7 +15,10 @@ function Header() {
        <Link to="/"><h1>Fake Store</h1></Link> 
       <div className='icon-btn'>
         <Link to="/checkout"><img src={cart}/></Link>
-        <p>{checkout.length}</p>
+        <p>
+          
+        {checkout.length == 0? "" : (<p className='length-btn'> {checkout.length} </p>)}
+        </p>
       </div>
     </div>
   )
