@@ -74,11 +74,27 @@
     .item-card{
         width: 220px;
     }
+
+    .item-card:hover{
+        transform: none;
+    }
+    
+    .heart-icon:hover{
+        transform: none;
+    }
   }
 
   @media screen and (max-width: 428px){
     .item-card{
         width: 180px;
 
+    }
+
+    .heart-icon:hover{
+        transform: none;
+    }
+
+    .item-card:hover{
+        transform: none;
     }
   }

@@ -77,6 +77,17 @@
     transform: scale(0.95);
 }
 
+@media screen and (max-width: 768px){
+    .checkout-sub button:hover{
+        transform: none;
+    }
+
+    .modal-close-btn:hover{
+        transform: none;
+    }
+    
+}
+
 /*media query mobile */
 @media screen and (max-width: 428px){
     .checkout-header{
@@ -92,5 +103,13 @@
 
     .modal-header{
         font-size: 14px;
+    }
+
+    .checkout-sub button:hover{
+        transform: none;
+    }
+
+    .modal-close-btn:hover{
+        transform: none;
     }
 }

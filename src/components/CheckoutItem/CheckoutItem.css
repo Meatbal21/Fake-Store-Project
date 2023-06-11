@@ -51,6 +51,10 @@
     .checkout-item-detail img{
         height: 150px;
     }
+
+    .checkout-remove:hover{
+        transform: none;
+    }
 }
 
 /*media query mobile */
@@ -76,5 +80,8 @@
         position: absolute;
         right: 20px;
         top: 50px;
+    }
+    .checkout-remove:hover{
+        transform: none;
     }
 }

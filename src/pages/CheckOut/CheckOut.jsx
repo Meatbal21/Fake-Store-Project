@@ -82,7 +82,7 @@ function CheckOut({product}) {
                       <div className='modal-header'>
                           <h2>Your Order was successful!</h2>
                           <h3>Check your email for the order confirmation. Thank you for shopping with Fake Store!</h3>
-                          <Link to='/'><button className='modal-close-btn'>Return to main page</button> </Link>
+                          <Link to='/' ><button className='modal-close-btn' onClick={() => removeProduct(product.id)} >Return to main page</button> </Link>
                       </div>
 
                   </Modal></>)
