@@ -43,6 +43,6 @@ button{
 @media screen and (max-width: 428px){
     .contact-container{
         padding-top: 100px;
-        height: 70vh;
+        height: 100vh;
     }
 }
