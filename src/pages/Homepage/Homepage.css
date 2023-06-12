@@ -1,7 +1,7 @@
 .home-categories{
     background-color:var(--plain-background);
     padding: 30px 10px;
-    height: 100vh;
+    height: 100%;
 }
 
 .categories{
