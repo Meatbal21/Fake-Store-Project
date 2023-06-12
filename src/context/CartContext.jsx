@@ -67,7 +67,7 @@ export default function CartContextProvider(props) {
     
 
    return(
-       <CartContext.Provider value={{checkout, addProduct, removeProduct, getTotalCart}} >
+       <CartContext.Provider value={{checkout, addProduct, removeProduct, getTotalCart, setCheckOut}} >
            {props.children}
        </CartContext.Provider>
    )

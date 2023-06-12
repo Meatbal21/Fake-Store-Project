@@ -14,11 +14,11 @@ function Header() {
     <div className='header-container'>
        <Link to="/"><h1>Fake Store</h1></Link> 
       <div className='icon-btn'>
-        <Link to="/checkout"><img src={cart}/></Link>
+        <Link to="/checkout"><img src={cart}/>
         <p>
           
         {checkout.length == 0? "" : (<p className='length-btn'> {checkout.length} </p>)}
-        </p>
+        </p></Link>
       </div>
     </div>
   )

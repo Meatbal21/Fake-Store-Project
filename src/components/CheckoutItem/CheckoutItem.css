@@ -39,6 +39,7 @@
 
 .checkout-remove{
     transition: all 0.60s;
+    cursor: pointer;
 }
 
 .checkout-remove:hover{
